@@ -43,7 +43,7 @@ return{
        size = "it's small"
    }
 
-   var result;////
+   var result;
 
    if(i.type == 'grass'){
       result ='<span style="color:MediumVioletRed;">'
