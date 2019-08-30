@@ -22,62 +22,73 @@ var repo = [
  },
 ]
 
-    function add(pokemon) {
-      repo.unshift(pokemon);
+
+    function addList(pokemon){
+      var $list = document.createElement('li');
+      var $button = document.createElement('button');
+      $button.innerHTML = pokemon.name;
+      $button.classList.add('button');
+      $list.appendChild($button);
+      $pokemonList.appendChild($list);
+    }
+
+  function add(pokemon) {
+    repo.unshift(pokemon);
     }
 
      function getAll() {
       return repo;
     }
+    function remove(pokemon){
+      repo.pop(pokemon);
+    }
 return{
   add:add,
-  getAll:getAll
+  getAll:getAll,
+  remove:remove,
+  addList:addList
 }
 })();
+
+
+var $pokemonList = document.querySelector('.pokemon-list')
+
+
   pokemonRepository.getAll().forEach(function(i) {
   var size;
 
-  if (i.height > 1){
+    if (i.height > 1){
        size = "wow that's big"
-   }else {
+    }else {
        size = "it's small"
-   }
+    }
 
    var result;
-
-   if(i.type == 'grass'){
+     if(i.type == 'grass'){
       result ='<span style="color:MediumVioletRed;">'
 
-   }else if (i.type == 'fire'){
+     }else if (i.type == 'fire'){
           result ='<span style="color:red;">'
-   }else if (i.type == 'poison'){
+     }else if (i.type == 'poison'){
           result = '<span style="color:blue;">'
-   }else if (i.type == 'psychic'){
+     }else if (i.type == 'psychic'){
           result = '<span style="color:MediumAquamarine	;">'
    }
- document.write('<div class="item">'+
- i.name +
- '<br>' +
-i.type +
- '<br>'+
- i.height+
- '<br>'+
- result +
- size +
-
- '</div>');
-
-
+    
+pokemonRepository.addList(i)
+    //console.log(pokemonRepository.addList(i))
+    //console.log(pokemonRepository.add({name: 'Pikachu'}))
+   // console.log(pokemonRepository.getAll())
+//console.log(pokemonRepository.remove())
 
 });
 
 
-
-
-
-
-console.log(pokemonRepository.add({name: 'Pikachu'}))
 console.log(pokemonRepository.getAll())
+
+
+
+
 
 
 
