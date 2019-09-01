@@ -21,17 +21,22 @@ var repo = [
    type: ['psychic']
  },
 ]
+  
 
-
-    function addList(pokemon){
+  function addList(pokemon){
       var $list = document.createElement('li');
       var $button = document.createElement('button');
       $button.innerHTML = pokemon.name;
       $button.classList.add('button');
       $list.appendChild($button);
       $pokemonList.appendChild($list);
+      $button.addEventListener('click', function (event) {
+      showDetails(pokemon)
+    })
     }
-
+  function showDetails(pokemon) {
+    console.log(pokemon)
+  }
   function add(pokemon) {
     repo.unshift(pokemon);
     }
