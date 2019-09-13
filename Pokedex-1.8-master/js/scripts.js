@@ -9,6 +9,7 @@ var pokemonRepository = (function() {
   function addList(pokemon) {
     var $pokemonList = document.querySelector(".pokemon-list");
     var $list = document.createElement("li");
+    $list.classList.add("list");
     var $button = document.createElement("button");
     $button.innerHTML = pokemon.name;
     $button.classList.add("button");

@@ -1,3 +1,8 @@
+.list {
+  display: inline;
+  margin: 80px;
+}
+
 #bg {
   position: fixed;
   top: 0;
@@ -20,7 +25,7 @@
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
-  width: 400px;
+  width: 300px;
   border-radius: 10%;
 }
 
