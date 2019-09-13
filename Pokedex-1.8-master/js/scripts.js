@@ -1,6 +1,6 @@
 var pokemonRepository = (function() {
   var repo = [];
-  var apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
+  var apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=891";
 
   function add(pokemon) {
     repo.unshift(pokemon);
@@ -64,33 +64,33 @@ var pokemonRepository = (function() {
           pokemon.types.push(details.types[i].type.name);
         }
         if (pokemon.types.includes("grass")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "Maroon";
         } else if (pokemon.types.includes("fire")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "Yellow";
         } else if (pokemon.types.includes("psychic")) {
           document.getElementById("modal").style.background = "green";
         } else if (pokemon.types.includes("poison")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "Red";
         } else if (pokemon.types.includes("water")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "Olive";
         } else if (pokemon.types.includes("bug")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "Purple";
         } else if (pokemon.types.includes("flying")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "Fuchsia";
         } else if (pokemon.types.includes("rock")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "Lime";
         } else if (pokemon.types.includes("ice")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "Teal";
         } else if (pokemon.types.includes("electric")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "Aqua";
         } else if (pokemon.types.includes("ghost")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "Blue";
         } else if (pokemon.types.includes("ground")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "Navy";
         } else if (pokemon.types.includes("steel")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "LemonChiffon";
         } else if (pokemon.types.includes("fairy")) {
-          document.getElementById("modal").style.background = "green";
+          document.getElementById("modal").style.background = "MediumVioletRed";
         }
         pokemon.abilities = [];
         for (var i = 0; i < details.abilities.length; i++) {
